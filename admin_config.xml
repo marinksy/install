@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adminConfig>
+<enableCoreDump>1</enableCoreDump>
+<sessionTimeout>3600</sessionTimeout>
+<logging>
+<log>
+<useServer>0</useServer>
+<fileName>$VH_ROOT/logs/error.log</fileName>
+<logLevel>INFO</logLevel>
+<rollingSize>10M</rollingSize>
+</log>
+<accessLog>
+<useServer>0</useServer>
+<fileName>$VH_ROOT/logs/access.log</fileName>
+<rollingSize>10M</rollingSize>
+<keepDays>90</keepDays>
+</accessLog>
+</logging>
+<security>
+<accessControl>
+<allow>
+127.0.0.1 #Ghici
+5.2.174.151   # Birou RDS
+89.120.111.179 # Birou RomTelecom
+89.36.130.98      #VPN
+91.195.28.4 #birou cj
+</allow>
+<deny>ALL</deny>
+</accessControl>
+</security>
+<listenerList>
+<listener>
+<name>adminListener</name>
+<address>*:7080</address>
+<secure>0</secure>
+</listener>
+</listenerList>
+</adminConfig>
